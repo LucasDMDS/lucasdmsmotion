@@ -358,16 +358,16 @@ footer{padding:1.8rem 4rem;border-top:1px solid var(--border);display:flex;justi
         <div class="form-field"><label>Nome</label><input type="text" id="c-name" placeholder="Seu nome" required></div>
         <div class="form-field"><label>E-mail</label><input type="email" id="c-email" placeholder="seu@email.com" required></div>
       </div>
-      <div class="form-field"><label>Tipo de projeto</label><select id="c-subject"><option>Motion Graphics</option><option>Edição de Vídeo</option><option>3D Modelling</option><option>Outro</option></select></div>
+      <div class="form-field"><label>Tipo de projeto</label><select id="c-subject"><option>Motion Graphics</option><option>Edição de Vídeo</option><option>3D Modelling</option><option>Roteiro</option><option>Outro</option></select></div>
       <div class="form-field"><label>Mensagem</label><textarea id="c-msg" placeholder="Conte sobre seu projeto..." required></textarea></div>
       <button type="submit" class="form-submit">▶ Enviar</button>
     </form></div></section>
-  <footer><span class="foot-logo">LDMSMOTION</span><span>© 2026 · TODOS OS DIREITOS RESERVADOS</span><span>ldms.motion@gmail.com</span></footer>
+  <footer><span class="foot-logo">LDMSMOTION</span><span>© 2026 · TODOS OS DIREITOS RESERVADOS</span><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dbb7bfb6a8f5b6b4afb2b4b59bbcb6bab2b7f5b8b4b6">[email&#160;protected]</a></span></footer>
   <div class="modal" id="modal"><div class="modal-inner">
     <button class="close-btn" onclick="closeModal()">✕ CLOSE</button>
     <div class="modal-video" id="modal-video"></div>
   </div></div>
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const pbg=document.getElementById('parallax-bg');
   let raf;
   if(pbg){window.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{const off=window.scrollY*.12;pbg.style.transform=`scale(1.15) translateY(-${off}px)`;pbg.style.setProperty('--py',`-${off}px`);});},{passive:true});}
@@ -388,9 +388,4 @@ footer{padding:1.8rem 4rem;border-top:1px solid var(--border);display:flex;justi
   const ham=document.getElementById('hamburger');
   const mNav=document.getElementById('mobileNav');
   if(ham&&mNav){
-    ham.addEventListener('click',()=>{ham.classList.toggle('open');mNav.classList.toggle('open');});
-    mNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');mNav.classList.remove('open');}));
-  }
-</script>
-</body>
-</html>
+    ham.addEventListener('click',()=
