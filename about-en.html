@@ -247,7 +247,7 @@ footer{padding:1.8rem 4rem;border-top:1px solid var(--border);display:flex;justi
 .modal-video iframe{width:100%;height:100%;border:none;}
 
 /* about */
-.about-wrap{padding:5rem 4rem;display:grid;grid-template-columns:1fr 1.5fr;gap:4rem;align-items:start;}
+.about-wrap{padding:5rem 4rem;display:grid;grid-template-columns:280px 1fr;gap:2.5rem;align-items:start;}
 .about-photo{width:100%;max-width:340px;aspect-ratio:3/4;object-fit:cover;object-position:center top;border:1px solid var(--border);filter:grayscale(10%) contrast(1.05);}
 .about-eyebrow{font-family:'VT323',monospace;font-size:.82rem;letter-spacing:.4em;color:var(--cyan);text-shadow:0 0 10px var(--cyan);margin-bottom:.7rem;}
 .about-name{font-size:clamp(1.8rem,4vw,3rem);font-weight:900;text-transform:uppercase;background:linear-gradient(135deg,#fff 20%,var(--lavender) 50%,var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.4rem;}
@@ -324,7 +324,7 @@ footer{padding:1.8rem 4rem;border-top:1px solid var(--border);display:flex;justi
       <p class="about-eyebrow">// ABOUT ME</p>
       <h1 class="about-name">Lucas D. M. Santos</h1>
       <p class="about-role">Motion Designer · Screenwriter · Editor</p>
-      <div class="about-bio"><p>Hi! I'm Lucas, a Brazilian audiovisual professional focused on motion design, video editing, and 3D modelling. Passionate about storytelling, I believe every project deserves its own narrative and unique aesthetic.</p><p>I work with brands, artists, and independent projects that have something real to say — from the initial script all the way to final delivery, caring for every detail so that the story lands with impact.</p></div>
+      <div class="about-bio"><p>I've been in the audiovisual industry for over fifteen years, having produced scripts and videos for major national and international brands, as well as taking part in the production of series broadcast across Brazil and exported to dozens of countries.</p><p>I work on video production end to end — from idea to script, from production to delivery — with solid, transparent processes at every stage.</p><p>I believe every story deserves to be told, and that storytelling is the most powerful way to captivate an audience, build genuine connection, and make an idea resonate at a deeper level.</p></div>
       <div class="about-skills"><span class="skill-tag">Motion Design</span><span class="skill-tag">After Effects</span><span class="skill-tag">Blender</span><span class="skill-tag">DaVinci Resolve</span><span class="skill-tag">Premiere Pro</span><span class="skill-tag">Screenwriting</span><span class="skill-tag">3D Modelling</span><span class="skill-tag">Video Editing</span></div>
       <a class="about-cta" href="index-en.html#contact">▶ Get in touch</a>
     </div>
@@ -341,12 +341,12 @@ footer{padding:1.8rem 4rem;border-top:1px solid var(--border);display:flex;justi
       <div class="form-field"><label>Message</label><textarea id="c-msg" placeholder="Tell me about your project..." required></textarea></div>
       <button type="submit" class="form-submit">▶ Send</button>
     </form></div></section>
-  <footer><span class="foot-logo">LDMSMOTION</span><span>© 2026 · ALL RIGHTS RESERVED</span><span>ldms.motion@gmail.com</span></footer>
+  <footer><span class="foot-logo">LDMSMOTION</span><span>© 2026 · ALL RIGHTS RESERVED</span><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1f737b726c3172706b7670715f78727e7673317c7072">[email&#160;protected]</a></span></footer>
   <div class="modal" id="modal"><div class="modal-inner">
     <button class="close-btn" onclick="closeModal()">✕ CLOSE</button>
     <div class="modal-video" id="modal-video"></div>
   </div></div>
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const pbg=document.getElementById('parallax-bg');
   let raf;
   if(pbg){window.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{const off=window.scrollY*.12;pbg.style.transform=`scale(1.15) translateY(-${off}px)`;pbg.style.setProperty('--py',`-${off}px`);});},{passive:true});}
@@ -367,9 +367,4 @@ footer{padding:1.8rem 4rem;border-top:1px solid var(--border);display:flex;justi
   const ham=document.getElementById('hamburger');
   const mNav=document.getElementById('mobileNav');
   if(ham&&mNav){
-    ham.addEventListener('click',()=>{ham.classList.toggle('open');mNav.classList.toggle('open');});
-    mNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');mNav.classList.remove('open');}));
-  }
-</script>
-</body>
-</html>
+    ham.addEventListener('click',()=
