@@ -302,9 +302,21 @@ footer{padding:1.8rem 4rem;border-top:1px solid var(--border);display:flex;justi
 @media(max-width:480px){
   .hero h1{font-size:2.8rem;}
 }
+
+/* ── Mobile menu backdrop — blocks clicks on content below ── */
+.nav-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 98; /* below nav-mobile (z:199) but above everything else */
+  background: transparent;
+  cursor: default;
+}
+.nav-backdrop.open { display: block; }
 </style>
 </head>
 <body class="vhs">
+  <div class="nav-backdrop" id="navBackdrop"></div>
   <div id="vhsOverlay"></div>
   <div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div>
   <div class="retro-grid"></div>
@@ -362,12 +374,12 @@ footer{padding:1.8rem 4rem;border-top:1px solid var(--border);display:flex;justi
       <div class="form-field"><label>Mensagem</label><textarea id="c-msg" placeholder="Conte sobre seu projeto..." required></textarea></div>
       <button type="submit" class="form-submit">▶ Enviar</button>
     </form></div></section>
-  <footer><span class="foot-logo">LDMSMOTION</span><span>© 2026 · TODOS OS DIREITOS RESERVADOS</span><span>ldms.motion@gmail.com</span></footer>
+  <footer><span class="foot-logo">LDMSMOTION</span><span>© 2026 · TODOS OS DIREITOS RESERVADOS</span><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="167a727b65387b79627f797856717b777f7a3875797b">[email&#160;protected]</a></span></footer>
   <div class="modal" id="modal"><div class="modal-inner">
     <button class="close-btn" onclick="closeModal()">✕ CLOSE</button>
     <div class="modal-video" id="modal-video"></div>
   </div></div>
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const pbg=document.getElementById('parallax-bg');
   let raf;
   if(pbg){window.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{const off=window.scrollY*.12;pbg.style.transform=`scale(1.15) translateY(-${off}px)`;pbg.style.setProperty('--py',`-${off}px`);});},{passive:true});}
@@ -385,17 +397,26 @@ footer{padding:1.8rem 4rem;border-top:1px solid var(--border);display:flex;justi
 
   function toggleVHS(){document.body.classList.toggle('vhs');document.getElementById('vhsBtn').textContent=document.body.classList.contains('vhs')?'◼ VHS OFF':'▶ VHS';}
 
-    const ham=document.getElementById('hamburger');
+      const ham=document.getElementById('hamburger');
   const mNav=document.getElementById('mobileNav');
+  const backdrop=document.getElementById('navBackdrop');
+  function openMobileNav(){
+    ham.classList.add('open');
+    mNav.classList.add('open');
+    if(backdrop) backdrop.classList.add('open');
+    document.body.style.overflow=''; /* don't lock scroll, just block clicks */
+  }
+  function closeMobileNav(){
+    ham.classList.remove('open');
+    mNav.classList.remove('open');
+    if(backdrop) backdrop.classList.remove('open');
+  }
   if(ham&&mNav){
     ham.addEventListener('click',()=>{
-      ham.classList.toggle('open');
-      mNav.classList.toggle('open');
+      mNav.classList.contains('open') ? closeMobileNav() : openMobileNav();
     });
-    mNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-      ham.classList.remove('open');
-      mNav.classList.remove('open');
-    }));
+    mNav.querySelectorAll('a').forEach(a=>a.addEventListener('click', closeMobileNav));
+    if(backdrop) backdrop.addEventListener('click', closeMobileNav);
   }
 </script>
 </body>
