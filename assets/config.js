@@ -15,7 +15,7 @@ window.SITE_CONFIG = {
 
   /* 1) GOOGLE ADS — ID da tag (o mesmo para as duas conversões)
         Formato: AW- seguido de números.  Exemplo: 'AW-123456789'            */
-  GOOGLE_ADS_ID: 'AW-XXXXXXXXXX',
+  GOOGLE_ADS_ID: 'AW-18139351060',
 
   /* 2) GOOGLE ADS — RÓTULO da conversão "Formulário enviado"
         É o texto que aparece DEPOIS da barra em AW-123456789/AbCdEfGhIjK
