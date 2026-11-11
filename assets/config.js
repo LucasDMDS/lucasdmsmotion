@@ -28,7 +28,7 @@ window.SITE_CONFIG = {
 
   /* 4) FORMULÁRIO — endereço (endpoint) criado no Formspree
         Exemplo: 'https://formspree.io/f/abcdwxyz'                            */
-  FORMSPREE_URL: 'https://formspree.io/f/XXXXXXXX',
+  FORMSPREE_URL: 'https://formspree.io/f/mqpqkkyq',
 
   /* 5) E-MAIL de contato exibido no rodapé e usado como plano B.
         (O e-mail que RECEBE as mensagens do formulário é definido no Formspree.) */
