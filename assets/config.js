@@ -20,7 +20,7 @@ window.SITE_CONFIG = {
   /* 2) GOOGLE ADS — RÓTULO da conversão "Formulário enviado"
         É o texto que aparece DEPOIS da barra em AW-123456789/AbCdEfGhIjK
         Exemplo: 'AbCdEfGhIjK'                                                */
-  LABEL_FORMULARIO: '-gJcCIrRqrYdEJSQwslD',
+  LABEL_FORMULARIO: 'RLgrCIjpibcdEJSQwslD',
 
   /* 3) GOOGLE ADS — RÓTULO da conversão "Clique no WhatsApp"
         Mesmo formato do item 2, mas é um rótulo DIFERENTE.                   */
