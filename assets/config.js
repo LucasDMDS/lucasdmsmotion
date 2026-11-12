@@ -24,7 +24,7 @@ window.SITE_CONFIG = {
 
   /* 3) GOOGLE ADS — RÓTULO da conversão "Clique no WhatsApp"
         Mesmo formato do item 2, mas é um rótulo DIFERENTE.                   */
-  LABEL_WHATSAPP: 'kszNCI3RqrYdEJSQwslD',
+  LABEL_WHATSAPP: 'd7nRCIrkrrcdEJSQwslD',
 
   /* 4) FORMULÁRIO — endereço (endpoint) criado no Formspree
         Exemplo: 'https://formspree.io/f/abcdwxyz'                            */
